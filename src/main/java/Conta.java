@@ -4,15 +4,18 @@ public class Conta {
     {
         return saldo;
     }
-    public void depositar(double valor)
+    public boolean depositar(double valor)
     {
         saldo = saldo + valor;
+        return true;
     }
-    public void sacar(double valor)
-    {   if(saldo > valor)
+    public boolean sacar(double valor)
+    {   if(saldo > valor) {
         saldo = saldo - valor;
+        return true;
+    }
         else
-            System.out.println("Saldo atual da conta é insuficiente para sacar: ");
+        return false;
     }
     public Conta(double saldoInicial)
     {
