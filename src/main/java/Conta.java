@@ -9,8 +9,10 @@ public class Conta {
         saldo = saldo + valor;
     }
     public void sacar(double valor)
-    {
+    {   if(saldo > valor)
         saldo = saldo - valor;
+        else
+            System.out.println("Saldo atual da conta é insuficiente para sacar: ");
     }
     public Conta(double saldoInicial)
     {
